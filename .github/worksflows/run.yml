@@ -2,7 +2,7 @@ name: Auto Post Hongkong Result
 
 on:
   schedule:
-    - cron: '0 16 * * *'  # Setiap hari jam 23:00 WIB (UTC+7)
+    - cron: '0 16 * * *'  # Jam 23:00 WIB
   workflow_dispatch:
 
 jobs:
@@ -22,10 +22,10 @@ jobs:
         run: |
           pip install -r requirements.txt
 
-      - name: Jalankan script post result Hongkong
+      - name: Run HK result script
         env:
           WP_USER: ${{ secrets.WP_USER }}
           WP_PASS: ${{ secrets.WP_PASS }}
-          WP_API_URL: ${{ secrets.WP_API_URL_HK }}
+          WP_API_URL: ${{ secrets.WP_API_URL }}
         run: |
           python run.py
