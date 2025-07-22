@@ -16,7 +16,7 @@ def ambil_tabel_hongkong():
             browser = p.chromium.launch(headless=True)
             page = browser.new_page()
 
-            url = "http://146.190.92.226/data-keluaran-hongkong/"
+            url = "http://206.189.86.19/data-keluaran-hongkong/"
 
             # Tambahkan retry maksimal 3x
             for attempt in range(3):
